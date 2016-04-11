@@ -1,6 +1,7 @@
 package com.example.myweather;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -12,9 +13,10 @@ import android.widget.ListView;
 
 
 public class MainActivity extends Activity {
-	private String[] weatherListData = {"星期一","星期二","星期三","星期四","星期五","星期六","星期天"};
-	private String[] weatherTendencyData = {"星期 ","星期","星期","星期","星期","星期","星期"};
+	private String[] weatherListData = {"星期一","星期二","星期三","星期四","星期五","星期六","星期天",""};
+	private String[] weatherTendencyData = {"星期1 ","星期2","星期3","星期4","星期5","星期6","星期7",""};
 	private String[] weatherIndexData = {"防晒指数","穿衣指数","运动指数","洗车指数","晾晒指数"};
+	
 	 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,19 +53,21 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				if(iBBAdd.getTag() == "off"){
-					iBBAdd.setImageDrawable(getResources().getDrawable(R.drawable.menu_bottom_add_on));
-					iBBAdd.setTag("on");
+					
 					//同时将其他按钮复位
 					iBBTendency.setImageDrawable(getResources().getDrawable(R.drawable.menu_bottom_tendency));
 					iBBTendency.setTag("off");
 					iBBIndex.setImageDrawable(getResources().getDrawable(R.drawable.menu_bottom_index));
 					iBBIndex.setTag("off");
+					
+					//打开城市列表
+					Intent addCityIntent = new Intent(MainActivity.this,CityList.class);
+					startActivity(addCityIntent);
+					
 					}else{
 						iBBAdd.setImageDrawable(getResources().getDrawable(R.drawable.menu_bottom_add));
 						iBBAdd.setTag("off");
-					}
-						
-				
+					}					
 			}
         });
     
@@ -75,11 +79,13 @@ public class MainActivity extends Activity {
 				if(iBBIndex.getTag() == "off"){
 					iBBIndex.setImageDrawable(getResources().getDrawable(R.drawable.menu_bottom_index_on));
 					iBBIndex.setTag("on");
+					
 					//同时将其他按钮复位
 					iBBTendency.setImageDrawable(getResources().getDrawable(R.drawable.menu_bottom_tendency));
 					iBBTendency.setTag("off");
 					iBBAdd.setImageDrawable(getResources().getDrawable(R.drawable.menu_bottom_add));
 					iBBAdd.setTag("off");
+					
 					//关闭天气趋势图
 					View weatherTendencyView = (View)findViewById(R.id.view_weather_tendency);
 					weatherTendencyView.setVisibility(View.GONE);
@@ -95,8 +101,7 @@ public class MainActivity extends Activity {
 						weatherIndexView.setVisibility(View.GONE);
 						weatherIndexView.setTag("gone");
 					}
-						
-				
+		
 			}
         });
         
@@ -115,6 +120,11 @@ public class MainActivity extends Activity {
 					iBBIndex.setImageDrawable(getResources().getDrawable(R.drawable.menu_bottom_index));
 					iBBIndex.setTag("off");
 					
+					//关闭气象指数
+					View weatherIndexView = (View)findViewById(R.id.view_weather_index);
+					weatherIndexView.setVisibility(View.GONE);
+					weatherIndexView.setTag("gone");
+					
 					View weatherTendencyView = (View)findViewById(R.id.view_weather_tendency);
 					weatherTendencyView.setVisibility(View.VISIBLE);
 					weatherTendencyView.setTag("visibe");
@@ -124,9 +134,7 @@ public class MainActivity extends Activity {
 						View weatherTendencyView = (View)findViewById(R.id.view_weather_tendency);
 						weatherTendencyView.setVisibility(View.GONE);
 						weatherTendencyView.setTag("gone");
-					}
-						
-				
+					}	
 			}
         });
         

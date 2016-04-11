@@ -1,13 +1,14 @@
 package com.example.myweather;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageButton;
 
-//这里面是想自定义首页下方三个按钮的点击事件
+//这里面是想自定义首页下方三个按钮的点击事件，暂时没有起作用2016年4月11日 23:18:28
 
 public class MenuPressBottom extends Activity {
 	 protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +23,9 @@ public class MenuPressBottom extends Activity {
 	        iBBAdd.setOnClickListener(new OnClickListener(){
 
 				@Override
-				public void onClick(View v) {
-					if(iBBAdd.getTag() == "off"){
-						iBBAdd.setImageDrawable(getResources().getDrawable(R.drawable.menu_bottom_add_on));
-						iBBAdd.setTag("on");
-						}else{
-							iBBAdd.setImageDrawable(getResources().getDrawable(R.drawable.menu_bottom_add));
-							iBBAdd.setTag("off");
-						}
-							
-					
+				public void onClick(View v) {			
+					Intent addCityIntent = new Intent(MenuPressBottom.this,CityList.class);
+					startActivity(addCityIntent);
 				}
 	        });
 	        

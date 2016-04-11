@@ -6,7 +6,7 @@
     <FrameLayout 
         android:id="@+id/main_weather_info"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent" >"
+        android:layout_height="fill_parent" >
         
         <include layout="@layout/weather_info" />
     </FrameLayout>
@@ -39,7 +39,7 @@
     <LinearLayout
         android:id="@+id/view_weather_tendency"
         android:layout_width="match_parent"
-        android:layout_height="300dip"
+        android:layout_height="wrap_content"
         android:layout_above="@id/main_weather_info"
         android:background="#fff"
         android:visibility="gone"

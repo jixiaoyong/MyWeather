@@ -21,42 +21,50 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int menu_bottom_add=0x7f020001;
-        public static final int menu_bottom_add_on=0x7f020002;
-        public static final int menu_bottom_index=0x7f020003;
-        public static final int menu_bottom_index_on=0x7f020004;
-        public static final int menu_bottom_tendency=0x7f020005;
-        public static final int menu_bottom_tendency_on=0x7f020006;
+        public static final int back=0x7f020000;
+        public static final int find=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int locate=0x7f020003;
+        public static final int menu_bottom_add=0x7f020004;
+        public static final int menu_bottom_index=0x7f020005;
+        public static final int menu_bottom_index_on=0x7f020006;
+        public static final int menu_bottom_tendency=0x7f020007;
+        public static final int menu_bottom_tendency_on=0x7f020008;
     }
     public static final class id {
-        public static final int action_settings=0x7f080012;
-        public static final int image_menu_bottom_add=0x7f080004;
-        public static final int image_menu_bottom_index=0x7f080005;
-        public static final int image_menu_bottom_tendency=0x7f080003;
+        public static final int action_settings=0x7f080017;
+        public static final int back=0x7f080003;
+        public static final int city_list_add=0x7f080007;
+        public static final int find_add=0x7f080005;
+        public static final int image_menu_bottom_add=0x7f080009;
+        public static final int image_menu_bottom_index=0x7f08000a;
+        public static final int image_menu_bottom_tendency=0x7f080008;
+        public static final int input_city=0x7f080004;
+        public static final int locate=0x7f080006;
         public static final int main_weather_info=0x7f080000;
-        public static final int menu_add=0x7f080007;
-        public static final int menu_index=0x7f080008;
-        public static final int menu_tendency=0x7f080006;
+        public static final int menu_add=0x7f08000c;
+        public static final int menu_index=0x7f08000d;
+        public static final int menu_tendency=0x7f08000b;
         public static final int view_weather_index=0x7f080001;
         public static final int view_weather_tendency=0x7f080002;
-        public static final int weather_didian=0x7f08000f;
-        public static final int weather_index=0x7f080009;
-        public static final int weather_kongqi=0x7f08000d;
-        public static final int weather_list=0x7f080010;
-        public static final int weather_temp=0x7f08000a;
-        public static final int weather_tendency=0x7f080011;
-        public static final int weather_updata_time=0x7f08000e;
-        public static final int weather_weather=0x7f08000b;
-        public static final int weather_wing=0x7f08000c;
+        public static final int weather_air=0x7f080012;
+        public static final int weather_index=0x7f08000e;
+        public static final int weather_list=0x7f080015;
+        public static final int weather_place=0x7f080014;
+        public static final int weather_temp=0x7f08000f;
+        public static final int weather_tendency=0x7f080016;
+        public static final int weather_updata_time=0x7f080013;
+        public static final int weather_weather=0x7f080010;
+        public static final int weather_wind=0x7f080011;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int menu_bottom=0x7f030001;
-        public static final int weather_index=0x7f030002;
-        public static final int weather_info=0x7f030003;
-        public static final int weather_list=0x7f030004;
-        public static final int weather_tendency=0x7f030005;
+        public static final int city_list=0x7f030001;
+        public static final int menu_bottom=0x7f030002;
+        public static final int weather_index=0x7f030003;
+        public static final int weather_info=0x7f030004;
+        public static final int weather_list=0x7f030005;
+        public static final int weather_tendency=0x7f030006;
     }
     public static final class menu {
         public static final int main=0x7f070000;
