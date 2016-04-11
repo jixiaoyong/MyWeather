@@ -2,28 +2,69 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
-    
-    <Button
-        android:id="@+id/menu_bottom1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="添加城市" />
-    
-    <Button
-        android:id="@+id/menu_bottom2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="天气趋势" />
-    
-    <Button
-        android:id="@+id/menu_bottom3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="指数" />
-    
+    android:background="#0000"
+    android:orientation="vertical">"
 
+    <RelativeLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" >
+       
+        <ImageButton 
+            android:id="@+id/image_menu_bottom_tendency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#0000"
+            android:tag="off"
+            android:src="@drawable/menu_bottom_tendency"/>
+        
+        <ImageButton 
+            android:id="@+id/image_menu_bottom_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/image_menu_bottom_tendency"
+            android:paddingRight="23dip"
+            android:background="#0000"
+            android:src="@drawable/menu_bottom_add"/>
+
+        <ImageButton 
+            android:id="@+id/image_menu_bottom_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image_menu_bottom_tendency"
+            android:paddingLeft="23dip"
+            android:background="#0000"
+            android:src="@drawable/menu_bottom_index"/>
+
+    </RelativeLayout>
+    
+    <RelativeLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+        
+        <TextView 
+            android:id="@+id/menu_tendency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="天气趋势"/>
+        
+        <TextView 
+            android:id="@+id/menu_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/menu_tendency"
+            android:paddingRight="2dip"
+            android:text="添加城市"/>
+        
+        <TextView 
+            android:id="@+id/menu_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/menu_tendency"
+            android:paddingLeft="2dip"
+            android:text="气象指数"/>"
+        
+    </RelativeLayout>
+    
 </LinearLayout>
