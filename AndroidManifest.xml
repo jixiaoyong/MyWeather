@@ -30,6 +30,19 @@
         <activity
             android:name="com.example.myweather.CityList">
         </activity>
+        
+        <activity 
+            android:name="com.example.myweather.AirInfo">    
+        </activity>
+        
+        <activity
+            android:name="com.example.myweather.AirInfoShare">
+        </activity>
+        
+        <activity
+            android:name="com.example.myweather.WeatherIndex">
+        </activity>
+        
     </application>
 
 </manifest>

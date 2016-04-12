@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="天气趋势"/>
+            android:text="@string/menu_tendency"/>
         
         <TextView 
             android:id="@+id/menu_add"
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@id/menu_tendency"
             android:paddingRight="2dip"
-            android:text="添加城市"/>
+            android:text="@string/menu_add"/>
         
         <TextView 
             android:id="@+id/menu_index"
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/menu_tendency"
             android:paddingLeft="2dip"
-            android:text="气象指数"/>
+            android:text="@string/menu_index"/>
         
     </RelativeLayout>
     

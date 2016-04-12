@@ -11,44 +11,59 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dip"
         android:layout_marginLeft="15dip"
-        android:text="温度"
+        android:text="@string/weather_temp"
         android:textSize="60sp"
         android:textColor="#f3f9f1"/>
    <TextView 
         android:id="@+id/weather_weather"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dip"
         android:layout_marginLeft="15dip"
-        android:text="天气"/>
+        android:text="@string/weather_weather"/>
    <TextView 
         android:id="@+id/weather_wind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dip"
         android:layout_marginLeft="15dip"
-        android:text="风力"/>
-   "
+        android:text="@string/weather_wind"/>
    
-   <TextView 
-        android:id="@+id/weather_air"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dip"
-        android:layout_marginLeft="15dip"
-        android:text="空气质量"/>
+   <LinearLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="left"
+       android:orientation="horizontal">"
+       
+	   <TextView 
+	        android:id="@+id/weather_air"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="15dip"
+	        android:layout_marginLeft="15dip"
+	        android:text="@string/weather_air"/>
+	   
+	   <ImageButton 
+	       android:id="@+id/into_air_info"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_marginLeft="5dip"
+	       android:background="#0000"
+	       android:src="@drawable/into_air_info"/>"
+	            
+   </LinearLayout>
+
+   
    <TextView 
         android:id="@+id/weather_updata_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dip"
         android:layout_marginLeft="15dip"
-        android:text="更新时间"/>
+        android:text="@string/weather_updata_time"/>
    <TextView 
         android:id="@+id/weather_place"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dip"
-        android:text="地点"/>
+        android:text="@string/weather_place"/>
 
 </LinearLayout>

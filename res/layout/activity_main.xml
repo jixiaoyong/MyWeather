@@ -12,9 +12,9 @@
     </FrameLayout>
     
     <LinearLayout
+        android:layout_above="@id/main_weather_info"
         android:layout_width="match_parent"
         android:layout_height="200dip"
-        android:layout_above="@id/main_weather_info"
         android:background="#fff"
         android:layout_alignParentBottom="true" > 
                  
@@ -25,7 +25,7 @@
     <LinearLayout
         android:id="@+id/view_weather_index"
         android:layout_width="match_parent"
-        android:layout_height="300dip"
+        android:layout_height="220dip"
         android:layout_above="@id/main_weather_info"
         android:background="#fff"
         android:visibility="gone"
@@ -39,7 +39,7 @@
     <LinearLayout
         android:id="@+id/view_weather_tendency"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dip"
         android:layout_above="@id/main_weather_info"
         android:background="#fff"
         android:visibility="gone"

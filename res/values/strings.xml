@@ -2,7 +2,42 @@
 <resources>
 
     <string name="app_name">MyWeather</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">设置</string>
     <string name="hello_world">Hello world!</string>
+    <string name="share">分享</string>
+    
+    <!-- 这是空气质量信息页面的文字 -->
+    
+    <string name="title_text_air_info">空气质量指数</string>
+    <string name="air_quality_text_air_info">这里是天气质量的详细信息</string>
+    <string name="air_pm2.5_text_air_info">这里是PM2.5等的详细信息</string>
+    <string name="heather_text_air_info">这里是健康运动建议等的详细信息</string>
 
+    <!-- 这是空气质量信息分享页面的文字 -->
+    
+    <string name="title_text_air_info_share">分享天气信息</string>
+    <string name="text_air_info_share">这里是预留的分享信息，还需要动态加入当天的天气状况，以及发布时间等信息</string>
+    <string name="input_city">输入城市名称</string>
+    
+    <!-- 这是主活动下面三个按钮对应的文字 -->
+    
+    <string name="menu_tendency">天气趋势</string>
+    <string name="menu_add">添加城市</string>
+    <string name="menu_index">气象指数</string>
+ 
+    <!-- 这是主活动的天气信息文字 -->
+    
+    <string name="weather_temp">温度</string>
+    <string name="weather_weather">天气</string>
+    <string name="weather_wind">风力</string> 
+    <string name="weather_air">空气质量</string>
+    <string name="weather_updata_time">更新时间</string>
+    <string name="weather_place">地点</string> 
+    
+     <!-- 这是主活动下方menu_index处的文字 -->
+
+    <string name="weather_index_name">这是气象指数项目名称</string>
+    <string name="weather_index_level">这是气象指数项目水平</string>
+    <string name="weather_index_text">这是气象指数详细信息</string>    
+    
 </resources>

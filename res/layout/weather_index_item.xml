@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">"
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        
+        <ImageView 
+            android:id="@+id/weather_index_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="5dip"
+            android:paddingLeft="5dip"/>
+        
+        <TextView
+            android:id="@+id/weather_index_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/weather_index_image"/>
+      
+        <ImageButton
+            android:id="@+id/weather_index_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="#0000"
+            android:tag="off"
+            android:src="@drawable/weather_index_button_off"/>
+                
+        <TextView
+            android:id="@+id/weather_index_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/weather_index_button"/>             "
+        "
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/view_weather_index_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        "
+        <TextView 
+            android:id="@+id/weather_index_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"/>
+        "
+    </LinearLayout>
+    
+
+</LinearLayout>
