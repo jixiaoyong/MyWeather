@@ -1,8 +1,8 @@
-# MyWeatcher
+# NiceWeatcher(好天气)
 
 My first android application.
 
-这是我连日学习 Android 软件开发以来的小小的尝试 —— 一个天气APP。
+这是我连日学习 Android 软件开发以来的小小的尝试 —— NiceWeatcher APP。
 
 这个软件以小米系统自带的天气应用为参考，预期大体的框架都会与其类似。
 
