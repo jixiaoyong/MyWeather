@@ -21,7 +21,7 @@
     <!-- 这是主活动下面三个按钮对应的文字 -->
     
     <string name="menu_tendency">天气趋势</string>
-    <string name="menu_add">添加城市</string>
+    <string name="menu_add">更换城市</string>
     <string name="menu_index">气象指数</string>
  
     <!-- 这是主活动的天气信息文字 -->
@@ -29,7 +29,7 @@
     <string name="weather_temp">温度</string>
     <string name="weather_weather">天气</string>
     <string name="weather_wind">风力</string> 
-    <string name="weather_air">空气质量</string>
+    <string name="weather_air">空气质量:轻度污染</string>
     <string name="weather_updata_time">更新时间</string>
     <string name="weather_place">地点</string> 
     

@@ -30,14 +30,14 @@ public class WeatherIndexAdapter extends ArrayAdapter<WeatherIndex> {
 		//创建相应对象
 		ImageView weatherIndexImage = (ImageView)view.findViewById(R.id.weather_index_image);
 		TextView weatherIndexName = (TextView)view.findViewById(R.id.weather_index_name);
-		TextView weather_index_level = (TextView)view.findViewById(R.id.weather_index_level);
-		TextView weather_index_text = (TextView)view.findViewById(R.id.weather_index_text);
+		TextView weatherIndexLevel = (TextView)view.findViewById(R.id.weather_index_level);
+		TextView weatherIndexText = (TextView)view.findViewById(R.id.weather_index_text);
 		
 		//对这些对象赋值
 		weatherIndexImage.setImageResource(weatherIndex.getImageId());
 		weatherIndexName.setText(weatherIndex.getName());
-		weather_index_level.setText(weatherIndex.getLevel());
-		weather_index_text.setText(weatherIndex.getTextId());
+		weatherIndexLevel.setText(weatherIndex.getLevel());
+		weatherIndexText.setText(weatherIndex.getTextId());
 		return view;
 	}
 

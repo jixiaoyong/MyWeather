@@ -19,9 +19,9 @@ import com.shayn.niceweather.R;
 public class MainActivity extends Activity {
 	private String[] weatherListData = {"星期一","星期二","星期三","星期四","星期五",""};
 	private String[] weatherTendencyData = {"星期1 ","星期2","星期3","星期4","星期5"};
-	private String[] weatherIndexData = {"防晒指数","穿衣指数","运动指数","洗车指数","晾晒指数"};
 	
 	private List<WeatherIndex> weatherIndexList = new ArrayList<WeatherIndex>();
+	private List<MainWeatherList> mainWeatherList = new ArrayList<MainWeatherList>();
 	 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +34,7 @@ public class MainActivity extends Activity {
         ArrayAdapter<String> weatherListAdapter = new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,weatherListData);
         ListView weatherListlistView = (ListView)findViewById(R.id.weather_list);
         weatherListlistView.setAdapter(weatherListAdapter);
-        
-        
-        //下面录入当天天气指数
-        ArrayAdapter<String> weatherIndexAdapter = new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,weatherIndexData);
-        ListView weatherLindexListView = (ListView)findViewById(R.id.weather_index);
-        weatherLindexListView.setAdapter(weatherIndexAdapter);
+ 
         
         //下面录入天气趋势
         
@@ -177,6 +172,12 @@ public class MainActivity extends Activity {
         ListView listView = (ListView)findViewById(R.id.weather_index);
         listView.setAdapter(weatherIndexAdapterMain);
         
+        //动态录入首页天气信息列表并初始化
+        initMainWeatherList();//初始化数据
+        MainWeatherListAdapter mainWeatherListAdapter = new MainWeatherListAdapter(MainActivity.this,R.layout.main_weather_list_item,mainWeatherList);
+        ListView mainWeatherListView =(ListView)findViewById(R.id.weather_list);
+        mainWeatherListView.setAdapter(mainWeatherListAdapter);
+        
     }
 
     //对气象指数初始化
@@ -193,6 +194,25 @@ public class MainActivity extends Activity {
     	weatherIndexList.add(field);
     }
 
+    	
+
+    //对首页天气信息列表初始化
+    private void initMainWeatherList(){
+    	MainWeatherList day1 = new MainWeatherList("星期一，5/2","多云转阴 15~20°");
+    	mainWeatherList.add(day1);
+    	MainWeatherList day2 = new MainWeatherList("星期二，6/2","多云转阴 15~20°");
+    	mainWeatherList.add(day2);
+    	MainWeatherList day3 = new MainWeatherList("星期三，7/2","多云转阴 15~20°");
+    	mainWeatherList.add(day3);
+    	MainWeatherList day4 = new MainWeatherList("星期四，8/2","多云转阴 15~20°");
+    	mainWeatherList.add(day4);
+    	MainWeatherList day5 = new MainWeatherList("星期五，9/2","多云转阴 15~20°");
+    	mainWeatherList.add(day5);
+    	MainWeatherList day6 = new MainWeatherList("星期六，10/2","多云转阴 15~20°");
+    	mainWeatherList.add(day6);
+    }
+    
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
