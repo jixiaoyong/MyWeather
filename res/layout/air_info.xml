@@ -7,14 +7,14 @@
     <LinearLayout 
         android:id="@+id/title_air_info"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff">
+        android:layout_height="wrap_content">
         
         <ImageButton
 	        android:id="@+id/back_air_info"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:background="#0000"
+	        android:layout_marginTop="3dip"
 	        android:paddingLeft="5dip"
 	        android:paddingRight="5dip"
 	        android:src="@drawable/back" />
@@ -23,8 +23,8 @@
             android:id="@+id/title_text_air_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
             android:layout_gravity="bottom"
-            android:textSize="25sp"
             android:text="@string/title_text_air_info" />      
     </LinearLayout>
     

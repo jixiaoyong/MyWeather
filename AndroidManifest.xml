@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myweather"
+    package="com.shayn.niceweather"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -10,11 +10,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/ic_launcher_sun"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.myweather.MainActivity"
+            android:name="com.shayn.niceweather.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,23 +24,23 @@
         </activity>
         
         <activity 
-            android:name="com.example.myweather.MenuPressBottom">
+            android:name="com.shayn.niceweather.MenuPressBottom">
         </activity>
         
         <activity
-            android:name="com.example.myweather.CityList">
+            android:name="com.shayn.niceweather.CityList">
         </activity>
         
         <activity 
-            android:name="com.example.myweather.AirInfo">    
+            android:name="com.shayn.niceweather.AirInfo">    
         </activity>
         
         <activity
-            android:name="com.example.myweather.AirInfoShare">
+            android:name="com.shayn.niceweather.AirInfoShare">
         </activity>
         
         <activity
-            android:name="com.example.myweather.WeatherIndex">
+            android:name="com.shayn.niceweather.WeatherIndex">
         </activity>
         
     </application>

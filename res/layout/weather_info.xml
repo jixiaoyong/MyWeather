@@ -27,11 +27,10 @@
         android:layout_marginLeft="15dip"
         android:text="@string/weather_wind"/>
    
-   <LinearLayout 
+   <RelativeLayout 
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:layout_gravity="left"
-       android:orientation="horizontal">"
+       android:orientation="horizontal">
        
 	   <TextView 
 	        android:id="@+id/weather_air"
@@ -39,17 +38,19 @@
 	        android:layout_height="wrap_content"
 	        android:layout_marginTop="15dip"
 	        android:layout_marginLeft="15dip"
+	        android:layout_marginRight="5dip"
 	        android:text="@string/weather_air"/>
 	   
 	   <ImageButton 
 	       android:id="@+id/into_air_info"
 	       android:layout_width="wrap_content"
 	       android:layout_height="wrap_content"
-	       android:layout_marginLeft="5dip"
+	       android:layout_marginTop="15dip"
+	       android:layout_toRightOf="@id/weather_air"
 	       android:background="#0000"
-	       android:src="@drawable/into_air_info"/>"
+	       android:src="@drawable/into_air_info"/>
 	            
-   </LinearLayout>
+   </RelativeLayout>
 
    
    <TextView 
@@ -59,11 +60,28 @@
         android:layout_marginTop="15dip"
         android:layout_marginLeft="15dip"
         android:text="@string/weather_updata_time"/>
-   <TextView 
-        android:id="@+id/weather_place"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dip"
-        android:text="@string/weather_place"/>
+   
+   <RelativeLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dip"
+       android:orientation="horizontal">
+       	   
+	   <ImageView 
+	       android:id="@+id/image_weather_place"
+	       android:layout_width="20dip"
+	       android:layout_height="20dip"
+	       android:layout_marginLeft="15dip"
+	       android:layout_marginRight="5dip"
+	       android:src="@drawable/locate"/>
+	   
+	   <TextView 
+	        android:id="@+id/weather_place"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/image_weather_place"
+	        android:text="@string/weather_place"/>
+	            
+   </RelativeLayout>
 
 </LinearLayout>
