@@ -77,8 +77,8 @@ public final class R {
         public static final int view_weather_tendency=0x7f080002;
         public static final int weather_air=0x7f080027;
         public static final int weather_index=0x7f08001d;
-        public static final int weather_index_button=0x7f080020;
-        public static final int weather_index_image=0x7f08001e;
+        public static final int weather_index_image_left=0x7f08001e;
+        public static final int weather_index_image_right=0x7f080020;
         public static final int weather_index_level=0x7f080021;
         public static final int weather_index_name=0x7f08001f;
         public static final int weather_index_text=0x7f080023;

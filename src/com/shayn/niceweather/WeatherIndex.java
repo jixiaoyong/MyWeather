@@ -5,66 +5,49 @@ import android.app.Activity;
 
 public class WeatherIndex extends Activity{
 	
-	private int imageId;
+	private int imageLeft;
 	private String name;
 	private String level;
-	private int buttonId;
+	private int imageRight;
 	private String text;
+	private String textTag;
 	
-	public WeatherIndex(int imageId,String name,String level,int buttonId,String text){
+	public WeatherIndex(int imageLeft,String name,String level,int imageRight,String text,String textTag){
 		
-		this.imageId = imageId;
+		this.imageLeft = imageLeft;
 		this.name = name;
 		this.level = level;
-		this.buttonId = buttonId;
+		this.imageRight = imageRight;
 		this.text = text;
-		
-/*		//定义按钮监听事件
-		final TextView weatherIndextext = (TextView)findViewById(R.id.weather_index_text);
-		final ImageButton weatherIndexImageButton = (ImageButton)findViewById(buttonId);
-		weatherIndexImageButton.setOnClickListener(new OnClickListener(){
-
-			@Override
-			public void onClick(View v) {
-				
-				//设置点击按钮事件
-				if(weatherIndexImageButton.getTag() == "off"){
-					weatherIndexImageButton.setImageDrawable(getResources().getDrawable(R.drawable.weather_index_button_on));
-					weatherIndexImageButton.setTag("on");
-					
-					weatherIndextext.setVisibility(View.VISIBLE);
-				}else{
-					
-					weatherIndexImageButton.setImageDrawable(getResources().getDrawable(R.drawable.weather_index_button_off));
-					weatherIndexImageButton.setTag("off");
-					
-					weatherIndextext.setVisibility(View.GONE);
-				}
-				
-			}
-			
-		});
-*/	
+		//this.textId = textId;
 	}
 	
 	public String getName(){
 		return name;
 	}
 	
-	public int getImageId(){
-		return imageId;
+	public int getImageLeft(){
+		return imageLeft;
 	}
 	
 	public String getLevel(){
 		return level;
 	}
 	
-	public int getButtonId(){
-		return buttonId;
+	public int getImageRight(){
+		return imageRight;
 	}
 	
-	public String getTextId(){
+	public String getText(){
 		return text;
+	}
+	
+	/*public int getTextId(){
+		return textId;
+	}*/
+	
+	public String getTextTag(){
+		return textTag;
 	}
 	
 

@@ -10,10 +10,15 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
-import com.shayn.niceweather.R;
+import android.widget.TextView;
+import android.widget.Toast;
+
 
 
 public class MainActivity extends Activity {
@@ -22,6 +27,8 @@ public class MainActivity extends Activity {
 	
 	private List<WeatherIndex> weatherIndexList = new ArrayList<WeatherIndex>();
 	private List<MainWeatherList> mainWeatherList = new ArrayList<MainWeatherList>();
+	
+
 	 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -172,6 +179,19 @@ public class MainActivity extends Activity {
         ListView listView = (ListView)findViewById(R.id.weather_index);
         listView.setAdapter(weatherIndexAdapterMain);
         
+        //对气象指数每一个子项设置监听事件
+        listView.setOnItemClickListener(new OnItemClickListener(){
+        	@Override
+        	public void onItemClick(AdapterView<?> parent,View view,int position,long id){
+        		WeatherIndex weatherIndex = weatherIndexList.get(position);
+        		
+        		Toast.makeText(MainActivity.this,weatherIndex.getName(),Toast.LENGTH_SHORT).show();
+        		//Toast.makeText(MainActivity.this,weatherIndex.getImageRight(),Toast.LENGTH_SHORT).show();
+        		//希望点击按钮显示隐藏的TextView，依旧没有实现2016年4月13日 14:13:45
+        		
+        	}
+        });
+        
         //动态录入首页天气信息列表并初始化
         initMainWeatherList();//初始化数据
         MainWeatherListAdapter mainWeatherListAdapter = new MainWeatherListAdapter(MainActivity.this,R.layout.main_weather_list_item,mainWeatherList);
@@ -182,15 +202,15 @@ public class MainActivity extends Activity {
 
     //对气象指数初始化
     private void initWeatherIndex(){
-    	WeatherIndex sunblock = new WeatherIndex(R.drawable.index_sunblock,"防晒指数","level",R.id.weather_index_button,"text1");
+    	WeatherIndex sunblock = new WeatherIndex(R.drawable.index_sunblock,"防晒指数","level",R.drawable.weather_index_button_off,"text1","gone");
     	weatherIndexList.add(sunblock);
-    	WeatherIndex dress = new WeatherIndex(R.drawable.index_dress,"穿衣指数","level",R.id.weather_index_button,"text2");
+    	WeatherIndex dress = new WeatherIndex(R.drawable.index_dress,"穿衣指数","level",R.drawable.weather_index_button_off,"text2","gone");
     	weatherIndexList.add(dress);
-    	WeatherIndex exercise = new WeatherIndex(R.drawable.index_exercise,"运动指数","level",R.id.weather_index_button,"text3");
+    	WeatherIndex exercise = new WeatherIndex(R.drawable.index_exercise,"运动指数","level",R.drawable.weather_index_button_off,"text3","gone");
     	weatherIndexList.add(exercise);
-    	WeatherIndex car = new WeatherIndex(R.drawable.index_car,"洗车指数","level",R.id.weather_index_button,"text4");
+    	WeatherIndex car = new WeatherIndex(R.drawable.index_car,"洗车指数","level",R.drawable.weather_index_button_off,"text4","gone");
     	weatherIndexList.add(car);
-    	WeatherIndex field = new WeatherIndex(R.drawable.index_field,"晾晒指数","level",R.id.weather_index_button,"text5");
+    	WeatherIndex field = new WeatherIndex(R.drawable.index_field,"晾晒指数","level",R.drawable.weather_index_button_off,"text5","gone");
     	weatherIndexList.add(field);
     }
 
